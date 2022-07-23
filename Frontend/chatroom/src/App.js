@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Messenger from './componenet/Messenger';
+import Messenger from './component/Messenger.js';
 
 
 function App() {
