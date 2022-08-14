@@ -1,37 +1,28 @@
 package com.app.chatroom.chatroomspringbootwebsocket.models;
 
 
+import lombok.*;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Message {
 	
-	private String name;
+	private String senderName;
 	
-	private String content;
+	private String receiverName;
 	
-	public Message(String name, String content) {
-		super();
-		this.name = name;
-		this.content = content;
+	private String message;
+	
+	private String date;
+	
+	private Status status;
+	
+	public enum Status {
+		JOIN,
+		MESSAGE,
+		LEAVE
 	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public String getContent() {
-		return content;
-	}
-	
-	public void setContent(String content) {
-		this.content = content;
-	}
-	
-	@Override
-	public String toString() {
-		return String.format("Message [name=%s, content=%s]", name, content);
-	}
-	
 }
