@@ -122,6 +122,7 @@ const Messenger = () => {
                         tab === "groupchat"
                         &&
                         <div className="chat-content">
+                            
                             <ul className="chat-messages overflow-auto">
                                 {publicMsgs.map((chat, index) => (
                                     <li className={`message ${chat.senderName === userData.username && "self"}`} key={index}>
